@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Epi-phone</title>
+  </head>
+
+  <body>
+    <!-- NAV BAR-------------- -->
+    <nav class="navbar navbar-expand-lg bg-dark  border-0 position-sticky top-0" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white logo ms-3" href="#"
+          ><img src="assets/img/logo.png" style="width: 150px" alt="epic-phone-logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column flex-lg-row align-items-lg-center ms-auto">
+            <a class="text-decoration-none text-white me-5 my-4 my-lg-0 p-0" href="./login.html">Backoffice</a>
+            <form class="d-flex pe-5" role="search">
+              <input id="searchInput" class="form-control-sm me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button id="src" class="btn btn-epicode-1" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!-- ---------------------MAIN----------------------------- -->
+    <main>
+      <div class="spinner-border text-epicode-1 fs-1 spinnerp" style="width: 10rem; height: 10rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+      <div id="blur" class="d-none"></div>
+      
+      <div class="container mt-5">
+        <div id="productsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4 justify-content-center justify-content-md-start">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>

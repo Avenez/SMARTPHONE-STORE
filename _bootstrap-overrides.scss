@@ -1,0 +1,218 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "./bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+// $input-btn-padding-y: .25rem;
+// $input-btn-padding-x: .75rem;
+
+// $grid-gutter-width:  0.5rem;
+
+// $danger:#ff0077;
+// $info:#00ffea;
+// $light:#f3eeff;
+
+
+$epicode-1:#5726c3;
+$epicode-2:#8625a5;
+$epicode-3:#cb2376;
+$epicode-4:rgb(0, 102, 236);
+
+$xxxl: 1600px;
+$xxxxl: 1800px;
+
+
+
+
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "./bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+// $font-sizes: (
+//   1: $h1-font-size,
+//   2: $h2-font-size,
+//   3: $h3-font-size,
+//   4: $h4-font-size,
+//   5: $h5-font-size,
+//   6: $h6-font-size
+// ) !default;
+
+// --------CARDS--------
+// $card-bg: $dark;
+// $card-color: $info;
+// $card-border-radius: 2rem;
+// $card-inner-border-radius: subtract($card-border-radius, $card-border-width);
+
+// ---------PILL ELEMENTS--------
+// $border-radius-pill;
+// $badge-border-radius: $border-radius-pill;
+// $input-border-radius: $border-radius-pill;
+
+// $btn-border-radius:$border-radius-pill        ;
+// $btn-border-radius-sm:$border-radius-pill        ;
+// $btn-border-radius-lg:$border-radius-pill        ;
+
+
+// --------fonts sizes--------
+$h7-font-size:  $font-size-base * 0.75;
+$h8-font-size:  $font-size-base * 0.65;
+$h9-font-size:  $font-size-base * 0.55;
+$h10-font-size:  $font-size-base * 0.45;
+
+$font-bigger-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+);
+
+$font-sizes:map-merge($font-sizes,$font-bigger-sizes);
+
+
+// --------border sizes--------
+$border-bigger-widths: (
+  6: 6px,  
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
+);
+
+$border-widths:map-merge($border-widths,$border-bigger-widths);
+
+// -------- ADD COLORS------
+
+$epicode-1:#5726c3;
+$epicode-2:#8625a5;
+$epicode-3:#cb2376;
+$epicode-4:rgb(0, 102, 236);
+
+$colors-EPICODE-theme:(
+"epicode-1":$epicode-1,
+"epicode-2":$epicode-2,
+"epicode-3":$epicode-3,
+"epicode-4":$epicode-4,
+
+);
+
+$colors: map-merge($colors,$colors-EPICODE-theme);
+$theme-colors: map-merge($theme-colors,$colors-EPICODE-theme);
+
+// ------BREAK POINTS ------
+
+$grid-larger-breakpoints:(
+  xxxl: $xxxl, 
+  xxxxl: $xxxxl,  
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $grid-larger-breakpoints);
+
+
+$container-larger-max-widths: (
+  xxxl: 1520px,
+  xxxxl: 1720px,
+);
+
+$container-max-widths: map-merge($container-max-widths, $container-larger-max-widths);
+
+
+
+
+
+
+
+
+
+// 5. Include remainder of required parts
+@import "./bootstrap/scss/maps";
+@import "./bootstrap/scss/mixins";
+@import "./bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "./bootstrap/scss/utilities";
+@import "./bootstrap/scss/helpers";
+@import "./bootstrap/scss/root";
+@import "./bootstrap/scss/reboot";
+@import "./bootstrap/scss/type";
+@import "./bootstrap/scss/images";
+@import "./bootstrap/scss/containers";
+@import "./bootstrap/scss/grid";
+@import "./bootstrap/scss/tables";
+@import "./bootstrap/scss/forms";
+@import "./bootstrap/scss/buttons";
+@import "./bootstrap/scss/transitions";
+@import "./bootstrap/scss/dropdown";
+@import "./bootstrap/scss/button-group";
+@import "./bootstrap/scss/nav";
+@import "./bootstrap/scss/navbar";
+@import "./bootstrap/scss/card";
+@import "./bootstrap/scss/accordion";
+@import "./bootstrap/scss/breadcrumb";
+@import "./bootstrap/scss/pagination";
+@import "./bootstrap/scss/badge";
+@import "./bootstrap/scss/alert";
+@import "./bootstrap/scss/progress";
+@import "./bootstrap/scss/list-group";
+@import "./bootstrap/scss/close";
+@import "./bootstrap/scss/toasts";
+@import "./bootstrap/scss/modal";
+@import "./bootstrap/scss/tooltip";
+@import "./bootstrap/scss/popover";
+@import "./bootstrap/scss/carousel";
+@import "./bootstrap/scss/spinners";
+@import "./bootstrap/scss/offcanvas";
+@import "./bootstrap/scss/placeholders";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "./bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+
+.link{
+  &:hover{
+  color:#cb2376;
+  }}
+
+html{
+
+  background-color: rgba(34,37,41,1);
+}
+
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(34,37,41,1) 100%);
+  }
+
+
+.cardImg{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  };
+
+  .spinnerp {
+    position: absolute;
+    top: 30vh;
+    left: 45vw;
+    z-index: 10;
+  }
+
+
+  .blur{
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    background-color: rgba(0, 0, 0, 0.61); 
+    backdrop-filter: blur(5px);
+    z-index: 9;
+  }
+
+  nav{
+    z-index: 100000;
+  }
+  

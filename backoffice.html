@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/back.css" />
+    <title>Epi-phone</title>
+  </head>
+
+  <body>
+    <!-- NAV BAR-------------- -->
+    <nav class="navbar navbar-expand-lg bg-dark border-0" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white logo ms-3" href="#"
+          ><img src="assets/img/logo.png" style="width: 150px" alt="epic-phone-logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="spinner-border text-epicode-1 fs-1 spinnerp d-none" style="width: 10rem; height: 10rem" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+      <div id="blur" class="d-none"></div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-1 col-md-2"></div>
+          <!------------------------------- FORM----------------------- -->
+          <!-- ------------------------------------NOME------------------------------- -->
+          <div class="col-8 col-md-6 m-auto">
+            <form class="mt-5">
+              <div class="input-group flex-nowrap shadow mb-4">
+                <span
+                  class="input-group-text bg-transparent text-epicode-2 fs-5 border-1 border-epicode-2"
+                  id="addon-wrapping"
+                  >Nome Prodotto</span
+                >
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  placeholder="..."
+                  aria-label="nomeProdotto"
+                  id="nomeProdotto"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <!-- ------------------------------------BRAND------------------------------- -->
+
+              <div class="input-group flex-nowrap shadow mb-4">
+                <span
+                  class="input-group-text bg-transparent text-epicode-2 fs-5 border-1 border-epicode-2"
+                  id="addon-wrapping"
+                  >Brand</span
+                >
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  placeholder="..."
+                  aria-label="brand"
+                  id="brand"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <!-- ------------------------------------PREZZO------------------------------- -->
+              <div class="input-group flex-nowrap shadow mb-4">
+                <span
+                  class="input-group-text bg-transparent text-epicode-2 fs-5 border-1 border-epicode-2"
+                  id="addon-wrapping"
+                  >Prezzo</span
+                >
+                <input
+                  required
+                  type="number"
+                  class="form-control"
+                  placeholder="..."
+                  id="prezzo"
+                  aria-label="prezzo"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <!-- ------------------------------------img------------------------------- -->
+              <div class="input-group flex-nowrap shadow mb-4">
+                <span
+                  class="input-group-text bg-transparent text-epicode-2 fs-5 border-1 border-epicode-2"
+                  id="addon-wrapping"
+                  >Url Immagine</span
+                >
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  placeholder="..."
+                  aria-label="urlImg"
+                  id="urlImg"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <!-- ------------------------------------Descrizione------------------------------- -->
+              <div class="input-group flex-nowrap shadow mb-4">
+                <span
+                  class="input-group-text bg-transparent text-epicode-2 fs-5 border-1 border-epicode-2"
+                  id="addon-wrapping"
+                  >Descrizione</span
+                >
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  placeholder="..."
+                  aria-label="descrizione"
+                  id="descrizione"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+
+              <!-- -----------------------------OPERAZIONE----------------------- -->
+              <div class="input-group mb-3">
+                <button id="esegui" class="btn btn-epicode-1" type="button">Esegui</button>
+                <select class="form-select" id="inputGroupSelect" aria-label="Example select with button addon">
+                  <option selected>Scegli operazione...</option>
+                  <option value="1">✏️ Modifica<i class="bi bi-pencil-square ms-2"></i></option>
+                  <option value="2">➕ Aggiungi<i class="bi bi-cloud-plus-fill ms-2"></i></option>
+                  <option value="3">❌ Elimina<i class="bi bi-trash3-fill ms-2"></i></option>
+                </select>
+              </div>
+
+              <!--  <div class="mb-3">
+                <label for="pName" class="form-label text-white">Nome Modello</label>
+                <input type="text" class="form-control" id="pName" aria-describedby="emailHelp" />
+              </div>
+              <div class="mb-3">
+                <label for="pBrand" class="form-label text-white">Brand</label>
+                <input type="text" class="form-control" id="pBrand" aria-describedby="emailHelp" />
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label text-white">Prezzo</label>
+                <input type="text" class="form-control" id="price" aria-describedby="emailHelp" />
+              </div>
+              <div class="mb-3">
+                <label for="pImgUrl" class="form-label text-white">Url Immagine</label>
+                <input type="text" class="form-control" id="pImgUrl" aria-describedby="emailHelp" />
+              </div>
+              <div class="mb-3">
+                <label for="pPrice" class="form-label text-white">Prezzo</label>
+                <input type="number" class="form-control" id="pPrice" aria-describedby="emailHelp" />
+              </div> -->
+
+              <!-- <div class="d-flex justify-content-between flex-column flex-lg-row">
+                <button id="add" type="button" class="btn mb-4 btn-success">
+                  Aggiungi <i class="bi bi-cloud-plus-fill ms-2"></i>
+                </button>
+                <button id="mod" type="button" class="btn mb-4 btn-epicode-1">
+                  Modifica <i class="bi bi-pencil-square ms-2"></i>
+                </button>
+                <button id="del" type="button" class="btn mb-4 btn-danger">
+                  Elimina <i class="bi bi-trash3-fill ms-2"></i>
+                </button>
+              </div> -->
+            </form>
+
+            <ul class="list-group mt-5 border border-2 border-epicode-2">
+              <li class="list-group-item bg-epicode-2 text-bg-dark" aria-current="true">Altri Parametri</li>
+              <li class="list-group-item bg-transparent text-white border-0">
+                ID: <span id="id" class="text-epicode-3"></span>
+              </li>
+              <li class="list-group-item bg-transparent text-white border-0">
+                createdAt: <span id="createdAt" class="text-epicode-3"></span>
+              </li>
+              <li class="list-group-item bg-transparent text-white border-0">
+                updatedAt: <span id="updatedAt" class="text-epicode-3"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-1 col-md-2"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/scriptBack.js" defer></script>
+  </body>
+</html>
