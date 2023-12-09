@@ -98,6 +98,23 @@ let newProduct = function () {
   return product;
 };
 
+const reset = () => {
+  let nomeProdotto = document.getElementById("nomeProdotto");
+  let brand = document.getElementById("brand");
+  let prezzo = document.getElementById("prezzo");
+  let urlImg = document.getElementById("urlImg");
+  let descrizione = document.getElementById("descrizione");
+
+  nomeProdotto.value = "";
+  brand.value = "";
+  prezzo.value = "";
+  urlImg.value = "";
+  descrizione.value = "";
+};
+
+let resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", reset);
+
 // --------MODIFY
 let pModify = function () {
   isLoading(true);
