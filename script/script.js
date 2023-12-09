@@ -1,5 +1,7 @@
 const URL = "https://striveschool-api.herokuapp.com/api/product/";
 
+// --------FETCH DATI----------------
+
 const fetchData = function () {
   isLoading(true);
   fetch(URL, {
@@ -23,7 +25,6 @@ const fetchData = function () {
         let pBrand = product.brand;
         let pPrice = product.price;
         let pId = product._id;
-        // let pDes = product.description;
 
         createCardProd(pImg, pName, pBrand, pPrice, pId);
       });
@@ -31,7 +32,7 @@ const fetchData = function () {
     .finally(() => isLoading(false));
 };
 
-// ----------------------- CREATE CARD PROD
+// ----------------------- CREATE CARD PROD ------------------
 const createCardProd = function (img, name, brand, price, id) {
   let productContainer = document.getElementById("productsContainer");
   let product = document.createElement("div");
@@ -84,22 +85,6 @@ let searchEngine = function () {
     }
   });
 };
-
-// let searchEngine = function () {
-//   let searchName = document.getElementById("searchInput");
-//   let h4Collection = document.querySelectorAll("h4");
-
-//   h4Collection.forEach((i) => {
-//     const text = i.innerText;
-//     const lowerCaseText = i.innerText.toLowerCase();
-//     const upperCaseText = i.innerText.toUpperCase();
-//     if (!lowerCaseText.includes(searchName)) {
-//       i.parentNode.parentNode.classList.add("d-none");
-//     } else {
-//       i.parentNode.parentNode.classList.remove("d-none");
-//     }
-//   });
-// };
 
 let btnSerch = document.getElementById("src");
 btnSerch.addEventListener("click", searchEngine);

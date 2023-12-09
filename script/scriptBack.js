@@ -98,6 +98,8 @@ let newProduct = function () {
   return product;
 };
 
+// --------RESET--------------------------------
+
 const reset = () => {
   let nomeProdotto = document.getElementById("nomeProdotto");
   let brand = document.getElementById("brand");
@@ -115,7 +117,7 @@ const reset = () => {
 let resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", reset);
 
-// --------MODIFY
+// --------MODIFY --------------------------
 let pModify = function () {
   isLoading(true);
   let product = newProduct();
@@ -144,7 +146,7 @@ let pModify = function () {
     .finally(() => isLoading(false));
 };
 
-// --------ADD
+// --------ADD ---------------------------------
 let pAdd = function () {
   isLoading(true);
   let product = newProduct();
@@ -172,7 +174,7 @@ let pAdd = function () {
     .finally(() => isLoading(false));
 };
 
-// --------DELETE
+// --------DELETE --------------------------------
 let pDelete = function () {
   isLoading(true);
   const hasConfirmed = confirm("sei sicuro di voler eliminare il prodotto?");

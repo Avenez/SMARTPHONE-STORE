@@ -12,13 +12,7 @@ let functionId = function () {
     // if (prodId) {
     console.log("3");
     window.location.assign("./backoffice.html?resourceId=" + prodId);
-  }
-  // else {
-  //   console.log("4");
-  //   window.location.assign("./backoffice.html");
-  // }
-  //   }
-  else {
+  } else {
     console.log("5");
     alert("User e Password errate");
     user.value = "";
