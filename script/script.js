@@ -11,6 +11,8 @@ const fetchData = function () {
     },
   })
     .then((response) => {
+      // Usato il riferimento dell'esercizio per avere un punto di controllo e cercare di capire come funziona.
+      // non considerare come extra. Non fatto in autonomia
       if (response.status === 404) throw new Error("Risorsa non trovata");
       if (response.status >= 400 && response.status < 500) throw new Error("Errore lato Client");
       if (response.status >= 500 && response.status < 600) throw new Error("Errore lato Server");
